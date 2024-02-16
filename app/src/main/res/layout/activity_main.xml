@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:orientation="vertical">
+
+    <SurfaceView
+        android:id="@+id/faceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="3">
+
+
+        <TextView
+            android:id="@+id/redView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="Red" />
+
+        <SeekBar
+            android:id="@+id/redSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:max="255"
+            android:min="0" />
+
+        <TextView
+            android:id="@+id/redScore"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="0" />
+
+        <TextView
+            android:id="@+id/greenView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="Green" />
+
+        <SeekBar
+            android:id="@+id/greenSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:max="255"
+            android:min="0" />
+
+        <TextView
+            android:id="@+id/greenScore"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="0" />
+
+        <TextView
+            android:id="@+id/blueView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="Blue" />
+
+        <SeekBar
+            android:id="@+id/blueSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:max="255"
+            android:min="0" />
+
+        <TextView
+            android:id="@+id/blueScore"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="0" />
+
+        <TextView
+            android:id="@+id/styleText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="Hair Style" />
+
+        <Spinner
+            android:id="@+id/styleSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radioButtonHair"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Hair"
+            android:layout_weight="2"/>
+
+            <RadioButton
+                android:id="@+id/radioButtonEyes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Eyes"
+                android:layout_weight="2" />
+
+            <RadioButton
+                android:id="@+id/radioButtonSkin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Skin"
+                android:layout_weight="2" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="Random Face" />
+
+    </LinearLayout>
+
+</LinearLayout>
