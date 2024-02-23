@@ -45,19 +45,18 @@ public class Face extends SurfaceView {
         setWillNotDraw(false);
     }
 
-
-    private void drawFace(Canvas canvas){
-        Paint facePaint = new Paint();
-        facePaint.setColor(skinColor);
-        canvas.drawCircle(canvas.getWidth()/2,canvas.getHeight()/2, 400, facePaint);
-    }
-
     //draw eyes
     private void drawEyes(Canvas canvas){
         Paint eyePaint = new Paint();
         eyePaint.setColor(eyeColor);
         canvas.drawCircle(canvas.getWidth()/2+100, canvas.getHeight()/2-100, 90,eyePaint);
         canvas.drawCircle(canvas.getWidth()/2-100,canvas.getHeight()/2-100,90,eyePaint);
+    }
+
+    private void drawFace(Canvas canvas){
+        Paint facePaint = new Paint();
+        facePaint.setColor(skinColor);
+        canvas.drawCircle(canvas.getWidth()/2,canvas.getHeight()/2, 400, facePaint);
     }
 
     //draw mouth
@@ -128,6 +127,14 @@ public class Face extends SurfaceView {
         rgb[2] = Color.blue(skinColor);
         return rgb;
     }
+
+    /**
+     External Citation
+     Date:     22 February 2024
+     Problem:  needed help creating the array and changing the values
+     Resource:
+     StackOverFlow
+     */
 
     //set hair color
     public void setHairColor(int color){
