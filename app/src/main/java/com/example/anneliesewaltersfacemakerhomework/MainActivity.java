@@ -1,31 +1,30 @@
+package com.example.anneliesewaltersfacemakerhomework;
+
+import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.SeekBar;
+import android.widget.Spinner;
 
 /* @author Anneliese Walters
 
  */
 
-package com.example.anneliesewaltersfacemakerhomework;
-
-import android.os.Bundle;
-import android.widget.ArrayAdapter;
-import android.widget.SeekBar;
-import android.widget.Spinner;
-import android.widget.TextView;
-import androidx.appcompat.app.AppCompatActivity;
-
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //create EventHandler Object
+        //create face object
+        Face face = findViewById(R.id.surfaceView);
 
-        EventHandler handler = new EventHandler(this);
+        //create EventHandler object
+        EventHandler handler = new EventHandler(this,face);
 
-       //create seekbar objects to reference seek bars within layout
-
-
+        //Register controller object with the seekbar
         SeekBar redSB = findViewById(R.id.redSeekBar);
         redSB.setOnSeekBarChangeListener(handler);
 
@@ -35,30 +34,21 @@ public class MainActivity extends AppCompatActivity{
         SeekBar blueSB = findViewById(R.id.blueSeekBar);
         blueSB.setOnSeekBarChangeListener(handler);
 
-        // add items to spinner
-        String[] arraySpinner = new String[] {
-                "Bald", "Curly", "Straight"
-        };
+        Spinner hairStyleSpinner = findViewById(R.id.styleSpinner);
+        hairStyleSpinner.setOnItemSelectedListener(handler);
 
-        Spinner s = (Spinner) findViewById(R.id.styleSpinner);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_spinner_item, arraySpinner);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        s.setAdapter(adapter);
+        RadioButton hairButton = findViewById(R.id.radioButtonHair);
+        hairButton.setOnCheckedChangeListener(handler);
 
-        /**
-         External Citation
-         Date:     15 February 2024
-         Problem:  did not know how to add items to spinner
-         Resource:
-        Android SDK
-         */
+        RadioButton eyesButton = findViewById(R.id.radioButtonEyes);
+        eyesButton.setOnCheckedChangeListener(handler);
 
+        RadioButton skinButton = findViewById(R.id.radioButtonSkin);
+        skinButton.setOnCheckedChangeListener(handler);
 
-
-
+        Button rand = findViewById(R.id.button);
+        rand.setOnClickListener(handler);
 
 
     }
-
-    }
+}

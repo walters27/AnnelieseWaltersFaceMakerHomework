@@ -12,8 +12,8 @@
         android:layout_weight="4"
         android:orientation="vertical">
 
-    <SurfaceView
-        android:id="@+id/faceView"
+    <com.example.anneliesewaltersfacemakerhomework.Face
+        android:id="@+id/surfaceView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
     </LinearLayout>
@@ -41,12 +41,7 @@
             android:max="255"
             android:min="0" />
 
-        <TextView
-            android:id="@+id/redScore"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:text="0" />
+
 
         <TextView
             android:id="@+id/greenView"
@@ -63,12 +58,7 @@
             android:max="255"
             android:min="0" />
 
-        <TextView
-            android:id="@+id/greenScore"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:text="0" />
+
 
         <TextView
             android:id="@+id/blueView"
@@ -85,12 +75,7 @@
             android:max="255"
             android:min="0" />
 
-        <TextView
-            android:id="@+id/blueScore"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:text="0" />
+
 
         <TextView
             android:id="@+id/styleText"
@@ -104,6 +89,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="2"
+            android:entries="@array/hairStyles"
+            android:spinnerMode="dialog" />
+
             />
 
         <RadioGroup
